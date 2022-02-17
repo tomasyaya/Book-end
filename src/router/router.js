@@ -3,9 +3,9 @@ import { Switch } from "react-router-dom";
 import { AppRoute, GuestRoute } from ".";
 import { Auth } from "../pages/Auth";
 import { Main } from "../pages/Main";
-import { NewProject } from "../pages/NewProject";
-import { Projects } from "../pages/Projects";
-import { Project } from "../pages/Project";
+import { NewBook } from "../pages/NewBook";
+import { Books } from "../pages/Books";
+import { Book } from "../pages/Book";
 
 function AppRouter() {
   return (
@@ -16,14 +16,14 @@ function AppRouter() {
       <GuestRoute path="/signup" exact>
         <Auth />
       </GuestRoute>
-      <AppRoute exact path="/projects">
-        <Projects />
+      <AppRoute exact path="/books">
+        <Books />
       </AppRoute>
-      <AppRoute exact path="/projects/:projectId">
-        <Project />
+      <AppRoute exact path="/books/:bookId">
+        <Book />
       </AppRoute>
-      <AppRoute exact path="/new-project">
-        <NewProject />
+      <AppRoute exact path="/new-book">
+        <NewBook />
       </AppRoute>
       <AppRoute exact path="/">
         <Main />

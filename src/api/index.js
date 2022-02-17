@@ -1,5 +1,5 @@
 export * from "./auth";
 
-export * from "./projects";
+export * from "./books";
 
 export * from "./files";

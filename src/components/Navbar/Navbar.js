@@ -13,11 +13,11 @@ function Navbar() {
         <Link style={margin} to="/">
           Home
         </Link>
-        <Link style={margin} to="/projects">
-          Projects
+        <Link style={margin} to="/books">
+          Books
         </Link>
-        <Link style={margin} to="/new-project">
-          New project
+        <Link style={margin} to="/new-book">
+          Add a Book
         </Link>
         <button style={margin} onClick={handleLogout}>
           logout
