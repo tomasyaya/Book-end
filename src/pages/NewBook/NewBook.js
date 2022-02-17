@@ -1,11 +1,11 @@
 import React from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+//import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { createbook, uploadImage } from "../../api";
 
 function NewBook() {
-  const [state, setState] = React.useState({ title: "", description: "", author: "", ISBN: "", genre: "" });
+  const [state, setState] = React.useState({ title: "", description: "", author: "", ISBN: "", genre: ""});
   const [file, setFile] = React.useState();
-  const history = useHistory();
+  //const history = useHistory();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,7 +17,7 @@ function NewBook() {
       ...state,
       imageUrl: imageData.imageUrl,
     });
-    history.push("/books")
+    //history.push("/books")
     console.log("data", data);
   };
 
@@ -66,9 +66,13 @@ function NewBook() {
         name="genre"
         required
         onChange={handleChange}
-        value={state.description}
+        value={state.genre}
       />
-    <input type="file" name="imageUrl" onChange={handleFileChange} />
+     <input 
+    type="file" 
+    name="imageUrl" 
+    onChange={handleFileChange}
+     />
       <button type="submit">Create book</button>
     </form>
   );
