@@ -16,13 +16,13 @@ function AppRouter() {
       <GuestRoute path="/signup" exact>
         <Auth />
       </GuestRoute>
-      <AppRoute exact path="/books">
-        <Books />
-      </AppRoute>
-      <AppRoute exact path="/books/:bookId">
+      <AppRoute path="/books/:bookId">
         <Book />
       </AppRoute>
-      <AppRoute exact path="/new-book">
+      <AppRoute path="/books">
+        <Books />
+      </AppRoute>
+      <AppRoute path="/new-book">
         <NewBook />
       </AppRoute>
       <AppRoute exact path="/">
